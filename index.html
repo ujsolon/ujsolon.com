@@ -28,6 +28,30 @@ body {
 .w3-container {
     color: #4B0082; /* Indigo for container text */
 }
+.skill-bar {
+  position: relative;
+  height: 24px; /* Adjust this value to change the height of the bars */
+  min-width: 24px; /* Ensures very short bars are still visible */
+}
+
+.skill-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white; /* Default text color */
+}
+
+/* Ensure text is visible on very short bars */
+.skill-bar[style*="width:25%"] .skill-text,
+.skill-bar[style*="width:10%"] .skill-text {
+  color: black;
+  left: 100%;
+  right: auto;
+  white-space: nowrap;
+}
 </style>
 </head>
 <body>
@@ -56,26 +80,29 @@ body {
           <hr>
 
           <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-red"></i>Proficiencies</b></p>
-          <p>Teaching math</p>
+          <p>Python and SQL</p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge" style="width:90%; background-color: #8A2BE2;">very proficient</div>
+            <div class="w3-container w3-center w3-round-xlarge skill-bar" style="width:90%; background-color: #8A2BE2;">
+              <span class="skill-text">very proficient</span>
+            </div>
           </div>
-          <p>Coding stuff</p>
+          <p>General Mathematics</p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge" style="width:70%; background-color: #8A2BE2;">
-              <div class="w3-center w3-text-white">knowledgeable</div>
+            <div class="w3-container w3-center w3-round-xlarge skill-bar" style="width:70%; background-color: #8A2BE2;">
+              <span class="skill-text">knowledgeable</span>
             </div>
           </div>
           <p>Speaking French</p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge" style="width:25%; background-color: #8A2BE2;">
-                <div class="w3-center w3-text-black">learning</div>
+            <div class="w3-container w3-center w3-round-xlarge skill-bar" style="width:25%; background-color: #8A2BE2;">
+              <span class="skill-text">learning</span>
             </div>
           </div>
           <p>Taking care of a baby</p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge" style="width:10%; background-color: #8A2BE2;">
-                <div class="w3-center w3-text-black">whatamievendoing</div> </div>
+            <div class="w3-container w3-center w3-round-xlarge skill-bar" style="width:10%; background-color: #8A2BE2;">
+              <span class="skill-text">whatamievendoing</span>
+            </div>
           </div>
           <br>
 
@@ -98,10 +125,10 @@ body {
     
     <!-- Work Experience -->
     <div class="w3-container w3-card w3-white w3-margin-bottom">
-      <h2 class="w3-text-grey w3-padding-16">
+      <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('workExperience')" style="cursor: pointer;">
         <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
         Work Experience
-        <button onclick="toggleSection('workExperience')" class="w3-button w3-right">Toggle</button>
+        <i class="fa fa-caret-down w3-right"></i>
       </h2>
       <div id="workExperience">
         <div class="w3-container">
@@ -123,10 +150,15 @@ body {
           <hr>
         </div>
       </div>
-
+    </div>
     <!-- Education -->
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Education</h2>
+          <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('education')" style="cursor: pointer;">
+            <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
+            Education
+            <i class="fa fa-caret-down w3-right"></i>
+          </h2>
+          <div id="education">
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Université de Pau et des Pays de l'Adour</b></h5>
           <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2018 - Sep 2021</h6>
@@ -140,11 +172,16 @@ body {
           <hr>
         </div>
       </div>
-    
+    </div>
     <!-- Portfolio Projects -->
     
       <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-folder fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Portfolio Projects</h2>
+          <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('portfolioProjects')" style="cursor: pointer;">
+            <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
+            Portfolio Projects
+            <i class="fa fa-caret-down w3-right"></i>
+          </h2>
+          <div id="portfolioProjects">
         <div class="w3-container">
           <h5 class="w3-opacity"><b><a href="https://github.com/ujsolon/QR-code-generative-imaging">QR Code Generative Imaging</a></b></h5>
           <p>GitHub project focusing on generating QR codes with advanced imaging techniques.</p>
@@ -156,7 +193,7 @@ body {
           <hr>
         </div>
       </div>
-    
+    </div>
     <!-- End Right Column -->
     </div>
     
