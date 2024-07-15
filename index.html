@@ -1,286 +1,350 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>ujsolon website</title>
-<meta charset="UTF-8">
-<script src="https://kit.fontawesome.com/bb519b5f52.js" crossorigin="anonymous"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <title>ujsolon website</title>
+  <meta charset="UTF-8">
+  <script src="https://kit.fontawesome.com/bb519b5f52.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-body {
-    background-color: #E6E6FA; /* Light shade of violet */
-}
-.w3-card-4 {
-    background-color: #F8F8FF; /* GhostWhite for a lighter card background */
-}
-.w3-text-red, .w3-hover-opacity:hover {
-    color: #8A2BE2 !important; /* BlueViolet for text and hover effects */
-}
-.w3-light-grey {
-    background-color: #E6E6FA; /* Matching the background */
-}
-.w3-text-theme {
-    color: #8A2BE2 !important; /* BlueViolet for themed text */
-}
-.w3-container {
-    color: #4B0082; /* Indigo for container text */
-}
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Roboto", sans-serif
+    }
 
-/* For skill bars */
+    body {
+      background-color: #E6E6FA;
+      /* Light shade of violet */
+    }
 
-.skill-bar {
-  position: relative;
-  height: 24px; /* Adjust this value to change the height of the bars */
-  min-width: 24px; /* Ensures very short bars are still visible */
-}
+    .w3-card-4 {
+      background-color: #F8F8FF;
+      /* GhostWhite for a lighter card background */
+    }
 
-.skill-text {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  color: white; /* Default text color */
-}
+    .w3-text-red,
+    .w3-hover-opacity:hover {
+      color: #8A2BE2 !important;
+      /* BlueViolet for text and hover effects */
+    }
 
-/* Ensure text is visible on very short bars */
-.skill-bar[style*="width:25%"] .skill-text,
-.skill-bar[style*="width:10%"] .skill-text {
-  color: black;
-  left: 100%;
-  right: auto;
-  white-space: nowrap;
-}
+    .w3-light-grey {
+      background-color: #E6E6FA;
+      /* Matching the background */
+    }
 
-/* For highlight effects */
-.highlight-container {
-    transition: background-color 0.3s ease;
-}
+    .w3-text-theme {
+      color: #8A2BE2 !important;
+      /* BlueViolet for themed text */
+    }
 
-.emphasis-word {
-    transition: all 0.3s ease;
-    position: relative;
-}
+    .w3-container {
+      color: #4B0082;
+      /* Indigo for container text */
+    }
 
-.highlight-container:hover .emphasis-word::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: #8A2BE2;
-    opacity: 0.2;
-    z-index: -1;
-    border-radius: 3px;
-}
+    /* For skill bars */
 
-.highlight-container:hover .emphasis-word {
-    color: black; /* Changed to black */
-    font-weight: bold;
-}
+    .skill-bar {
+      position: relative;
+      height: 24px;
+      /* Adjust this value to change the height of the bars */
+      min-width: 24px;
+      /* Ensures very short bars are still visible */
+    }
 
-.w3-third img {
-  width: 100%;
-  height: auto;
-}
+    .skill-text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      color: white;
+      /* Default text color */
+    }
 
-</style>
+    /* Ensure text is visible on very short bars */
+    .skill-bar[style*="width:25%"] .skill-text,
+    .skill-bar[style*="width:10%"] .skill-text {
+      color: black;
+      left: 100%;
+      right: auto;
+      white-space: nowrap;
+    }
+
+    /* For highlight effects */
+    .highlight-container {
+      transition: background-color 0.3s ease;
+    }
+
+    .emphasis-word {
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .highlight-container:hover .emphasis-word::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #8A2BE2;
+      opacity: 0.2;
+      z-index: -1;
+      border-radius: 3px;
+    }
+
+    .highlight-container:hover .emphasis-word {
+      color: black;
+      /* Changed to black */
+      font-weight: bold;
+    }
+
+    .w3-third img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="profileweb15jul2024.jpg" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomright w3-container w3-text-white">
-            <h2>Ulyses Solon</h2>
-          </div>
-        </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-red"></i>Researcher, programmer, mentor</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-red"></i>Rizal, Philippines</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-red"></i>ujsolon[at]gmail.com</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-red"></i>(+63)(2)7756 0192</p>
-          <hr>
+    <!-- The Grid -->
+    <div class="w3-row-padding">
 
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-red"></i>Proficiencies</b></p>
-          <p>Python and SQL</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge skill-bar" style="width:90%; background-color: #8A2BE2;">
-              <span class="skill-text">very proficient</span>
+      <!-- Left Column -->
+      <div class="w3-third">
+
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container">
+            <img src="profileweb15jul2024.jpg" style="width:100%" alt="Avatar">
+            <div class="w3-display-bottomright w3-container w3-text-white">
+              <h2>Ulyses Solon</h2>
             </div>
           </div>
-          <p>General Mathematics</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge skill-bar" style="width:70%; background-color: #8A2BE2;">
-              <span class="skill-text">knowledgeable</span>
-            </div>
-          </div>
-          <p>Speaking French</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge skill-bar" style="width:25%; background-color: #8A2BE2;">
-              <span class="skill-text">learning</span>
-            </div>
-          </div>
-          <p>Taking care of a baby</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge skill-bar" style="width:10%; background-color: #8A2BE2;">
-              <span class="skill-text">whatamievendoing</span>
-            </div>
-          </div>
-          <br>
+          <div class="w3-container">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-red"></i>Researcher, programmer, mentor
+            </p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-red"></i>Rizal, Philippines</p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-red"></i>ujsolon[at]gmail.com</p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-red"></i>(+63)(2)7756 0192</p>
+            <hr>
 
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-red"></i>Link tree</b></p>
-          <p><i class="fa fa-linkedin w3-hover-opacity"></i> <a href="https://www.linkedin.com/in/ujsolon">LinkedIn</a></p>
-          <p><i class="fa fa-github w3-hover-opacity"></i> <a href="https://github.com/ujsolon">GitHub</a></p>
-          <p><i class="fa fa-wordpress w3-hover-opacity"></i> <a href="https://ujsolon.wordpress.com">Wordpress</a></p>
-          <p><i class="fa-brands fa-researchgate w3-hover-opacity"></i><a href="https://www.researchgate.net/profile/Ulyses_Jr_Solon?ev=hdr_xprf">Researchgate</a></p>
-          <p><i class="fa fa-twitter w3-hover-opacity"></i> <a href="https://twitter.com/ujsolon">Twitter</a></p>
-          <br>
-        </div>
-      </div><br>
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-red"></i>Proficiencies</b></p>
+            <p>Python and SQL</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge skill-bar"
+                style="width:90%; background-color: #8A2BE2;">
+                <span class="skill-text">very proficient</span>
+              </div>
+            </div>
+            <p>General Mathematics</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge skill-bar"
+                style="width:70%; background-color: #8A2BE2;">
+                <span class="skill-text">knowledgeable</span>
+              </div>
+            </div>
+            <p>Speaking French</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge skill-bar"
+                style="width:25%; background-color: #8A2BE2;">
+                <span class="skill-text">learning</span>
+              </div>
+            </div>
+            <p>Taking care of a baby</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge skill-bar"
+                style="width:10%; background-color: #8A2BE2;">
+                <span class="skill-text">whatamievendoing</span>
+              </div>
+            </div>
+            <br>
 
-    <!-- End Left Column -->
-    </div>
+            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-red"></i>Link
+                tree</b></p>
+            <p><i class="fa fa-linkedin w3-hover-opacity"></i> <a
+                href="https://www.linkedin.com/in/ujsolon">LinkedIn</a></p>
+            <p><i class="fa fa-github w3-hover-opacity"></i> <a href="https://github.com/ujsolon">GitHub</a></p>
+            <p><i class="fa fa-wordpress w3-hover-opacity"></i> <a href="https://ujsolon.wordpress.com">Wordpress</a>
+            </p>
+            <p><i class="fa-brands fa-researchgate w3-hover-opacity"></i><a
+                href="https://www.researchgate.net/profile/Ulyses_Jr_Solon?ev=hdr_xprf">Researchgate</a></p>
+            <p><i class="fa fa-twitter w3-hover-opacity"></i> <a href="https://twitter.com/ujsolon">Twitter</a></p>
+            <br>
+          </div>
+        </div><br>
 
-    <!-- Right Column -->
-    
-    <div class="w3-twothird">
-    
-    <!-- Work Experience -->
-    <div class="w3-container w3-card w3-white w3-margin-bottom">
-      <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('workExperience')" style="cursor: pointer;">
-        <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
-        Work Experience
-        <i class="fa fa-caret-down w3-right"></i>
-      </h2>
-      <div id="workExperience">
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Development Team Lead / Accenture Inc.</b></h5>
-          <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2024 -Present</h6>
-          <div class="highlight-container">
-            <p>Lead developers, providing mentorship and fostering a <span class="emphasis-word">collaborative environment</span> to enhance team performance and skill development. Oversee the design, development, and deployment of <span class="emphasis-word">AI-driven solutions</span>, ensuring adherence to best practices in technical architecture and coding standards. Drive the technical strategy and architecture for scalable and <span class="emphasis-word">efficient database design and cloud infrastructure</span>, leveraging advanced tools and methodologies. Coordinate cross-functional requirements, working closely with stakeholders to align technical objectives with business goals.</p>
-          </div>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>AI Developer / Accenture Inc.</b></h5>
-          <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2023 - Jun 2024</h6>
-          <div class="highlight-container">
-          <p>Developed a web app solution with integrated chat functionality, leveraging <span class="emphasis-word">Retrieval-Augmented Generation (RAG)</span> for advanced knowledge querying from user-uploaded databases. Responsible for coding, testing, and deploying code in the MS <span class="emphasis-word">Azure Cloud</span> environment under the <span class="emphasis-word">Serverless</span> architecture framework. Successfully transitioned the solution from company internal use to client projects, securing paying customers.</p>
-          </div>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Researcher/Instructor / Institute of Mathematics, University of the Philippines Diliman</b></h5>
-          <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2014 - Jun 2023</h6>
-          <div class="highlight-container">
-          <p>Co-authored 5 peer-reviewed academic publications and <span class="emphasis-word">presented research findings</span> at international conferences. Mentored over 1000 students, receiving an average to <span class="emphasis-word">strongly positive</span> feedback from <span class="emphasis-word">98%</span> of mentees. Organized talks and meetings with faculty members, fostering collaborations with external institutions.</p>
-          </div>
-          <hr>
-        </div>
+        <!-- End Left Column -->
       </div>
-    </div>
-    <!-- Portfolio Projects -->
-    <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('portfolioProjects')" style="cursor: pointer;">
+
+      <!-- Right Column -->
+
+      <div class="w3-twothird">
+
+        <!-- Work Experience -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('workExperience')" style="cursor: pointer;">
             <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
+            Work Experience
+            <i class="fa fa-caret-down w3-right"></i>
+          </h2>
+          <div id="workExperience">
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b>Development Team Lead / Accenture Inc.</b></h5>
+              <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2024 -Present</h6>
+              <div class="highlight-container">
+                <p>Lead developers, providing mentorship and fostering a <span class="emphasis-word">collaborative
+                    environment</span> to enhance team performance and skill development. Oversee the design,
+                  development, and deployment of <span class="emphasis-word">AI-driven solutions</span>, ensuring
+                  adherence to best practices in technical architecture and coding standards. Drive the technical
+                  strategy and architecture for scalable and <span class="emphasis-word">efficient database design and
+                    cloud infrastructure</span>, leveraging advanced tools and methodologies. Coordinate
+                  cross-functional requirements, working closely with stakeholders to align technical objectives with
+                  business goals.</p>
+              </div>
+              <hr>
+            </div>
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b>AI Developer / Accenture Inc.</b></h5>
+              <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2023 - Jun 2024</h6>
+              <div class="highlight-container">
+                <p>Developed a web app solution with integrated chat functionality, leveraging <span
+                    class="emphasis-word">Retrieval-Augmented Generation (RAG)</span> for advanced knowledge querying
+                  from user-uploaded databases. Responsible for coding, testing, and deploying code in the MS <span
+                    class="emphasis-word">Azure Cloud</span> environment under the <span
+                    class="emphasis-word">Serverless</span> architecture framework. Successfully transitioned the
+                  solution from company internal use to client projects, securing paying customers.</p>
+              </div>
+              <hr>
+            </div>
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b>Researcher/Instructor / Institute of Mathematics, University of the Philippines
+                  Diliman</b></h5>
+              <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2014 - Jun 2023</h6>
+              <div class="highlight-container">
+                <p>Co-authored 5 peer-reviewed academic publications and <span class="emphasis-word">presented research
+                    findings</span> at international conferences. Mentored over 1000 students, receiving an average to
+                  <span class="emphasis-word">strongly positive</span> feedback from <span
+                    class="emphasis-word">98%</span> of mentees. Organized talks and meetings with faculty members,
+                  fostering collaborations with external institutions.</p>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Projects -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('portfolioProjects')" style="cursor: pointer;">
+            <i class="fa fa-code fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
             Portfolio Projects
             <i class="fa fa-caret-down w3-right"></i>
           </h2>
           <div id="portfolioProjects">
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b><a href="https://github.com/ujsolon/QR-code-generative-imaging">QR Code Generative Imaging</a></b></h5>
-          <p>GitHub project focusing on generating QR codes with advanced imaging techniques.</p>
-          <hr>
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b><a href="https://github.com/ujsolon/QR-code-generative-imaging">QR Code
+                    Generative Imaging</a></b></h5>
+              <p>GitHub project focusing on generating QR codes with advanced imaging techniques.</p>
+              <hr>
+            </div>
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b><a href="https://github.com/ujsolon/NBASeriesML">NBA Series ML</a></b></h5>
+              <p>GitHub project applying machine learning techniques to analyze and predict NBA series outcomes.</p>
+              <hr>
+            </div>
+          </div>
         </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b><a href="https://github.com/ujsolon/NBASeriesML">NBA Series ML</a></b></h5>
-          <p>GitHub project applying machine learning techniques to analyze and predict NBA series outcomes.</p>
-          <hr>
+        <!-- Education -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('education')" style="cursor: pointer;">
+            <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
+            Education
+            <i class="fa fa-caret-down w3-right"></i>
+          </h2>
+          <div id="education">
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b>Université de Pau et des Pays de l'Adour</b></h5>
+              <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2018 - Sep 2021</h6>
+              <p>Doctoral Candidate (unfinished)</p>
+              <hr>
+            </div>
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b>University of the Philippines, Diliman</b></h5>
+              <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2012 - Jan 2016</h6>
+              <p>Master of Science in Mathematics</p>
+              <hr>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <!-- Education -->
-    <div class="w3-container w3-card w3-white w3-margin-bottom">
-      <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('education')" style="cursor: pointer;">
-        <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
-        Education
-        <i class="fa fa-caret-down w3-right"></i>
-      </h2>
-      <div id="education">
-    <div class="w3-container">
-      <h5 class="w3-opacity"><b>Université de Pau et des Pays de l'Adour</b></h5>
-      <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2018 - Sep 2021</h6>
-      <p>Doctoral Candidate (unfinished)</p>
-      <hr>
-    </div>
-    <div class="w3-container">
-      <h5 class="w3-opacity"><b>University of the Philippines, Diliman</b></h5>
-      <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2012 - Jan 2016</h6>
-      <p>Master of Science in Mathematics</p>
-      <hr>
-    </div>
-  </div>
-</div>
 
-<!-- Personal Life -->
-<div class="w3-container w3-card w3-white w3-margin-bottom">
-  <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('personalLife')" style="cursor: pointer;">
-    <i class="fa fa-heart fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
-    Personal Life
-    <i class="fa fa-caret-down w3-right"></i>
-  </h2>
-  <div id="personalLife">
-    <div class="w3-container">
-      <p> Outside of work, I'm a person with diverse interests, now embracing the responsibility of new fatherhood. I enjoy strategic games like chess and Dota 2, while staying active with basketball. DIY projects around the house are a satisfying pastime. My experiences range from childhood summers in San Pablo, Laguna, to staying near the university during my college instructor days, to a few years living in France during the pandemic. Wherever life takes me, I go. </p>
-      
-      <!-- Image Gallery -->
-      <div class="w3-row-padding" style="margin:0 -16px">
-        <div class="w3-third">
-          <a href="galeryweb15jul2024_1.jpg" target="_blank">
-            <img src="galeryweb15jul2024_1.jpg" style="width:100%" alt="Masters graduation with Mom" class="w3-hover-opacity">
-          </a>
-          <p>Celebrating a significant milestone in my academic journey, shared with the unwavering support of my mother.</p>
-        </div>
-        <div class="w3-third">
-          <a href="galeryweb15jul2024_2.jpg" target="_blank">
-            <img src="galeryweb15jul2024_2.jpg" style="width:100%" alt="Sunshine along the Seine with Wife" class="w3-hover-opacity">
-          </a>
-          <p>A cherished moment in Paris, enjoying the city's beauty with my life partner.</p>
-        </div>
-        <div class="w3-third">
-          <a href="galeryweb15jul2024_3.jpg" target="_blank">
-            <img src="galeryweb15jul2024_3.jpg" style="width:100%" alt="Batangas beach with Baby" class="w3-hover-opacity">
-          </a>
-          <p>Our first holiday season as a family of three, marking a new chapter filled with joy and wonder.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        <!-- Personal Life -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('personalLife')" style="cursor: pointer;">
+            <i class="fa fa-heart fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
+            Personal Life
+            <i class="fa fa-caret-down w3-right"></i>
+          </h2>
+          <div id="personalLife">
+            <div class="w3-container">
+              <p> Outside of work, I'm a person with diverse interests, now embracing the responsibility of new
+                fatherhood. I enjoy strategic games like chess and Dota 2, while staying active with basketball and the
+                occasional jogs. DIY projects around the house are a satisfying pastime. My experiences range from
+                childhood summers in San Pablo, Laguna, to staying near the university during my college instructor
+                days, to a few years living in France during the pandemic. Wherever life takes me, I go. </p>
 
-    <!-- End Right Column -->
+              <!-- Image Gallery -->
+              <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-third">
+                  <a href="galeryweb15jul2024_1.jpg" target="_blank">
+                    <img src="galeryweb15jul2024_1.jpg" style="width:100%" alt="Masters graduation with Mom"
+                      class="w3-hover-opacity">
+                  </a>
+                  <p>Celebrating a significant milestone in my academic journey, shared with the unwavering support of
+                    my mother.</p>
+                </div>
+                <div class="w3-third">
+                  <a href="galeryweb15jul2024_2.jpg" target="_blank">
+                    <img src="galeryweb15jul2024_2.jpg" style="width:100%" alt="Sunshine along the Seine with Wife"
+                      class="w3-hover-opacity">
+                  </a>
+                  <p>A cherished moment in Paris, enjoying the city's beauty with my life partner.</p>
+                </div>
+                <div class="w3-third">
+                  <a href="galeryweb15jul2024_3.jpg" target="_blank">
+                    <img src="galeryweb15jul2024_3.jpg" style="width:100%" alt="Batangas beach with Baby"
+                      class="w3-hover-opacity">
+                  </a>
+                  <p>Our first holiday season as a family of three, marking a new chapter filled with joy and wonder.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- End Right Column -->
+      </div>
+
+      <!-- End Grid -->
     </div>
-    
-  <!-- End Grid -->
+
+    <!-- End Page Container -->
   </div>
-  
-<!-- End Page Container -->
-</div>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
