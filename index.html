@@ -28,6 +28,9 @@ body {
 .w3-container {
     color: #4B0082; /* Indigo for container text */
 }
+
+/* For skill bars */
+
 .skill-bar {
   position: relative;
   height: 24px; /* Adjust this value to change the height of the bars */
@@ -52,6 +55,35 @@ body {
   right: auto;
   white-space: nowrap;
 }
+
+/* For highlight effects */
+.highlight-container {
+    transition: background-color 0.3s ease;
+}
+
+.emphasis-word {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.highlight-container:hover .emphasis-word::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #8A2BE2;
+    opacity: 0.2;
+    z-index: -1;
+    border-radius: 3px;
+}
+
+.highlight-container:hover .emphasis-word {
+    color: black; /* Changed to black */
+    font-weight: bold;
+}
+
 </style>
 </head>
 <body>
@@ -133,49 +165,32 @@ body {
       <div id="workExperience">
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Development Team Lead / Accenture Inc.</b></h5>
-          <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2024 - <span class="w3-tag w3-round" style="background-color: #8A2BE2;">Present</span></h6>
-          <p>Lead developers, providing mentorship and fostering a collaborative environment to enhance team performance and skill development. Oversee the design, development, and deployment of AI-driven solutions, ensuring adherence to best practices in technical architecture and coding standards. Drive the technical strategy and architecture for scalable and efficient database design and cloud infrastructure, leveraging advanced tools and methodologies. Coordinate cross-functional requirements, working closely with stakeholders to align technical objectives with business goals.</p>
+          <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2024 -Present</h6>
+          <div class="highlight-container">
+            <p>Lead developers, providing mentorship and fostering a <span class="emphasis-word">collaborative environment</span> to enhance team performance and skill development. Oversee the design, development, and deployment of <span class="emphasis-word">AI-driven solutions</span>, ensuring adherence to best practices in technical architecture and coding standards. Drive the technical strategy and architecture for scalable and <span class="emphasis-word">efficient database design and cloud infrastructure</span>, leveraging advanced tools and methodologies. Coordinate cross-functional requirements, working closely with stakeholders to align technical objectives with business goals.</p>
+          </div>
           <hr>
         </div>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>AI Developer / Accenture Inc.</b></h5>
           <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2023 - Jun 2024</h6>
-          <p>Developed a web app solution with integrated chat functionality, leveraging Retrieval-Augmented Generation (RAG) for advanced knowledge querying from user-uploaded databases. Responsible for coding, testing, and deploying code in the MS Azure Cloud environment under the Serverless architecture framework. Successfully transitioned the solution from company internal use to client projects, securing paying customers.</p>
+          <div class="highlight-container">
+          <p>Developed a web app solution with integrated chat functionality, leveraging <span class="emphasis-word">Retrieval-Augmented Generation (RAG)</span> for advanced knowledge querying from user-uploaded databases. Responsible for coding, testing, and deploying code in the MS <span class="emphasis-word">Azure Cloud</span> environment under the <span class="emphasis-word">Serverless</span> architecture framework. Successfully transitioned the solution from company internal use to client projects, securing paying customers.</p>
+          </div>
           <hr>
         </div>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Researcher/Instructor / Institute of Mathematics, University of the Philippines Diliman</b></h5>
           <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2014 - Jun 2023</h6>
-          <p>Co-authored 5 peer-reviewed academic publications and presented research findings at international conferences. Mentored over 1000 students, receiving an average to strongly positive feedback from 98% of mentees. Organized talks and meetings with faculty members, fostering collaborations with external institutions.</p>
-          <hr>
-        </div>
-      </div>
-    </div>
-    <!-- Education -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('education')" style="cursor: pointer;">
-            <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
-            Education
-            <i class="fa fa-caret-down w3-right"></i>
-          </h2>
-          <div id="education">
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Université de Pau et des Pays de l'Adour</b></h5>
-          <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2018 - Sep 2021</h6>
-          <p>Doctoral Candidate (unfinished)</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>University of the Philippines, Diliman</b></h5>
-          <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2012 - Jan 2016</h6>
-          <p>Master of Science in Mathematics</p>
+          <div class="highlight-container">
+          <p>Co-authored 5 peer-reviewed academic publications and <span class="emphasis-word">presented research findings</span> at international conferences. Mentored over 1000 students, receiving an average to <span class="emphasis-word">strongly positive</span> feedback from <span class="emphasis-word">98%</span> of mentees. Organized talks and meetings with faculty members, fostering collaborations with external institutions.</p>
+          </div>
           <hr>
         </div>
       </div>
     </div>
     <!-- Portfolio Projects -->
-    
-      <div class="w3-container w3-card w3-white">
+    <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('portfolioProjects')" style="cursor: pointer;">
             <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
             Portfolio Projects
@@ -194,6 +209,28 @@ body {
         </div>
       </div>
     </div>
+    <!-- Education -->
+    <div class="w3-container w3-card w3-white">
+      <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('education')" style="cursor: pointer;">
+        <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
+        Education
+        <i class="fa fa-caret-down w3-right"></i>
+      </h2>
+      <div id="education">
+    <div class="w3-container">
+      <h5 class="w3-opacity"><b>Université de Pau et des Pays de l'Adour</b></h5>
+      <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2018 - Sep 2021</h6>
+      <p>Doctoral Candidate (unfinished)</p>
+      <hr>
+    </div>
+    <div class="w3-container">
+      <h5 class="w3-opacity"><b>University of the Philippines, Diliman</b></h5>
+      <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2012 - Jan 2016</h6>
+      <p>Master of Science in Mathematics</p>
+      <hr>
+    </div>
+  </div>
+</div>
     <!-- End Right Column -->
     </div>
     
