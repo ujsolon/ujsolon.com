@@ -269,13 +269,38 @@
     }
 
     /* Make sure the news section has relative positioning for the badge */
-    #newsContainer .highlight-container {
+    #newsContainer .w3-container:first-child {
         position: relative;
     }
 
-    /* Style external links in news items */
+    /* Style for linked headlines */
+    .w3-container a.w3-text-theme {
+        transition: color 0.3s ease;
+    }
+
     .w3-container a.w3-text-theme:hover {
         color: #9370DB !important;
+        text-decoration: underline !important;
+    }
+
+    /* Styling for headline-only news items */
+    .news-headline-only {
+        padding: 8px 16px !important;
+        transition: background-color 0.3s ease;
+    }
+
+    /* .news-headline-only:hover {
+        background-color: rgba(138, 43, 226, 0.05);
+        border-radius: 4px;
+    } */
+
+    .news-headline-only h6 {
+        margin: 0 0 5px 0 !important;
+        font-size: 15px;
+    }
+
+    .news-headline-only p {
+        margin: 0 !important;
     }
   </style>
 </head>

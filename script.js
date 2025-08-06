@@ -29,26 +29,44 @@ function renderNews(posts) {
     const newsContainer = document.getElementById('newsContainer');
     let newsHtml = '';
     
-    posts.forEach((post, index) => {
+    // Show only first 3 posts maximum
+    const postsToShow = posts.slice(0, 3);
+    
+    postsToShow.forEach((post, index) => {
         const isLatest = index === 0;
+        const isHeadlineOnly = index > 0; // Posts 2 and 3 are headline-only
         
-        newsHtml += `
-            <div class="highlight-container">
+        if (isLatest) {
+            // Latest post - full content
+            newsHtml += `
                 <div class="w3-container">
-                    ${isLatest ? '<div class="latest-badge">Latest</div>' : ''}
-                    <h5 class="w3-opacity">
-                        <b>${post.title}</b>
-                        ${post.url ? `<a href="${post.url}" target="_blank" rel="noopener" class="w3-text-theme" style="margin-left: 10px; font-size: 14px;"><i class="fa fa-external-link"></i></a>` : ''}
-                    </h5>
+                    <div class="latest-badge">Latest</div>
+                    <h5 class="w3-opacity"><b>
+                        ${post.url ? `<a href="${post.url}" target="_blank" rel="noopener" class="w3-text-theme" style="text-decoration: none;"><b>${post.title}</b></a>` : `<b>${post.title}</b>`}
+                    </b></h5>
                     <h6 class="w3-text-theme">
                         <i class="fa ${getPlatformIcon(post.platform)} fa-fw w3-margin-right"></i>
                         ${formatDate(post.date)} • ${post.platform}
                     </h6>
                     <p>${post.content}</p>
                 </div>
-                ${index < posts.length - 1 ? '<hr>' : ''}
-            </div>
-        `;
+                <hr>
+            `;
+        } else {
+            // Other posts - headline and platform only
+            newsHtml += `
+                <div class="w3-container news-headline-only">
+                    <h6 class="w3-opacity">
+                        ${post.url ? `<a href="${post.url}" target="_blank" rel="noopener" class="w3-text-theme" style="text-decoration: none;"><b>${post.title}</b></a>` : `<b>${post.title}</b>`}
+                    </h6>
+                    <p class="w3-text-theme" style="font-size: 13px; margin: 5px 0;">
+                        <i class="fa ${getPlatformIcon(post.platform)} fa-fw"></i>
+                        ${formatDate(post.date)} • ${post.platform}
+                    </p>
+                </div>
+                ${index < postsToShow.length - 1 ? '<hr style="margin: 10px 0;">' : ''}
+            `;
+        }
     });
     
     newsContainer.innerHTML = newsHtml;
@@ -117,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadNews();
     
     // Set initial state - all sections except news hidden
-    const sections = ['workExperience', 'education', 'portfolioProjects', 'personalLife'];
+    const sections = ['workExperience', 'education', 'portfolioProjects', 'personalLife', 'news'];
     sections.forEach(sectionId => {
         const section = document.getElementById(sectionId);
         if (section) {
