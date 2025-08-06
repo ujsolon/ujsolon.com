@@ -243,6 +243,40 @@
         visibility: visible;
         opacity: 1;
     }
+
+    /* Simple News Section Styling - Add this to your existing CSS */
+
+    .latest-badge {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: #8A2BE2;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 12px;
+        font-size: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        z-index: 1;
+    }
+
+    .loading-news {
+        text-align: center;
+        padding: 20px;
+        color: #8A2BE2;
+        font-style: italic;
+    }
+
+    /* Make sure the news section has relative positioning for the badge */
+    #newsContainer .highlight-container {
+        position: relative;
+    }
+
+    /* Style external links in news items */
+    .w3-container a.w3-text-theme:hover {
+        color: #9370DB !important;
+    }
   </style>
 </head>
 
@@ -322,7 +356,23 @@
 
       <div class="w3-twothird">
 
-        <!-- Work Experience -->
+        <!-- News Section -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('news')" style="cursor: pointer;">
+            <i class="fa fa-newspaper fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
+            News
+            <i class="fa fa-caret-down w3-right"></i>
+          </h2>
+          <div id="news">
+            <div id="newsContainer">
+              <div class="loading-news">
+                <i class="fa fa-spinner fa-spin"></i> Loading latest updates...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work Section -->
         <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('workExperience')" style="cursor: pointer;">
             <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
@@ -408,7 +458,7 @@
             </div>
           </div>
         </div>
-        <!-- Portfolio Projects -->
+        <!-- Portfolio Section -->
         <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('portfolioProjects')" style="cursor: pointer;">
             <i class="fa fa-code fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
@@ -477,7 +527,7 @@
             </div>
           </div>
         </div>
-          <!-- Education -->
+          <!-- Education Section -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('education')" style="cursor: pointer;">
               <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
@@ -500,7 +550,7 @@
             </div>
           </div>
 
-          <!-- Personal Life -->
+          <!-- Personal Section -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('personalLife')" style="cursor: pointer;">
               <i class="fa fa-heart fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
