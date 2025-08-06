@@ -35,7 +35,7 @@
 
     .w3-text-red,
     .w3-hover-opacity:hover {
-      color: #8A2BE2 !important;
+      color: #f44336 !important;
       /* BlueViolet for text and hover effects */
     }
 
@@ -190,6 +190,59 @@
       opacity: 0.8;
       line-height: 1.4;
     }
+    
+    .icon-link {
+        display: inline-block;
+        margin: 5px 10px;
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .icon-link i {
+        font-size: 24px;
+        transition: transform 0.2s ease;
+        color: inherit;
+    }
+    
+    .icon-link:hover i {
+        transform: scale(1.2);
+        color: inherit;
+    }
+    
+    .tooltip {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 5px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        transition: opacity 0.3s;
+        z-index: 1;
+    }
+    
+    .tooltip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #333 transparent transparent transparent;
+    }
+    
+    .icon-link:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
   </style>
 </head>
 
@@ -205,64 +258,96 @@
       <div class="w3-third">
 
         <div class="w3-white w3-text-grey w3-card-4">
-          <div class="w3-display-container">
-            <img src="profileweb15jul2024.jpg" style="width:100%" alt="Avatar">
-            <div class="w3-display-bottomright w3-container w3-text-white">
-              <h2>Ulyses Solon</h2>
-            </div>
-          </div>
-          <div class="w3-container">
-            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-red"></i>Researcher, programmer, mentor
-            </p>
-            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-red"></i>Rizal, Philippines</p>
-            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-red"></i>ujsolon[at]gmail.com</p>
-            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-red"></i>(+63)(2)7756 0192</p>
-            <hr>
+    <div class="w3-display-container">
+        <img src="profileweb15jul2024.jpg" style="width:100%" alt="Avatar">
+        <div class="w3-display-bottomright w3-container w3-text-white">
+            <h2>Ulyses Solon</h2>
+        </div>
+    </div>
+    <div class="w3-container">
+        <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-theme"></i>AI Developer | Technology Architect </p>
+        <hr>
 
-            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-red"></i>Proficiencies</b></p>
-            <p>Python and SQL</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge skill-bar"
+        <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-theme"></i>Link tree</b></p>
+        
+        <div style="text-align: center; padding: 10px 0;">
+            <a href="mailto:ujsolon@gmail.com" class="icon-link w3-hover-opacity">
+                <i class="fa fa-envelope"></i>
+                <span class="tooltip">Email</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/ujsolon" class="icon-link w3-hover-opacity">
+                <i class="fa fa-linkedin w3-text-blue"></i>
+                <span class="tooltip">LinkedIn</span>
+            </a>
+            
+            <a href="https://github.com/ujsolon" class="icon-link w3-hover-opacity">
+                <i class="fa fa-github w3-text-dark-grey"></i>
+                <span class="tooltip">GitHub</span>
+            </a>
+            
+            <a href="https://ujsolon.wordpress.com" class="icon-link w3-hover-opacity">
+                <i class="fa fa-wordpress w3-text-blue"></i>
+                <span class="tooltip">WordPress</span>
+            </a>
+            
+            <a href="https://www.researchgate.net/profile/Ulyses_Jr_Solon?ev=hdr_xprf" class="icon-link w3-hover-opacity">
+                <i class="fa-brands fa-researchgate w3-text-teal"></i>
+                <span class="tooltip">ResearchGate</span>
+            </a>
+            
+            <a href="https://twitter.com/ujsolon" class="icon-link w3-hover-opacity">
+                <i class="fa fa-twitter w3-text-light-blue"></i>
+                <span class="tooltip">Twitter</span>
+            </a>
+
+            <a href="https://facebook.com/ujsolon" class="icon-link w3-hover-opacity">
+                <i class="fa fa-facebook w3-text-blue"></i>
+                <span class="tooltip">Facebook</span>
+            </a>
+            
+            <a href="https://youtube.com/@ujsolon" class="icon-link w3-hover-opacity">
+                <i class="fa fa-youtube w3-text-red"></i>
+                <span class="tooltip">YouTube</span>
+            </a>
+        </div>
+        
+        <br>
+
+        <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-theme"></i>Proficiencies</b></p>
+        <p>Python and SQL</p>
+        <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge skill-bar"
                 style="width:90%; background-color: #8A2BE2;">
                 <span class="skill-text">very proficient</span>
-              </div>
             </div>
-            <p>General Mathematics</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge skill-bar"
+        </div>
+        <p>General Mathematics</p>
+        <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge skill-bar"
                 style="width:70%; background-color: #8A2BE2;">
                 <span class="skill-text">knowledgeable</span>
-              </div>
             </div>
-            <p>Speaking French</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge skill-bar"
+        </div>
+        <p>Speaking French</p>
+        <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge skill-bar"
                 style="width:25%; background-color: #8A2BE2;">
                 <span class="skill-text">learning</span>
-              </div>
             </div>
-            <p>Taking care of a baby</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge skill-bar"
+        </div>
+        <p>Taking care of a baby</p>
+        <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge skill-bar"
                 style="width:10%; background-color: #8A2BE2;">
                 <span class="skill-text">whatamievendoing</span>
-              </div>
             </div>
-            <br>
+        </div>
+        <br>
 
-            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-red"></i>Link
-                tree</b></p>
-            <p><i class="fa fa-linkedin w3-hover-opacity"></i> <a
-                href="https://www.linkedin.com/in/ujsolon">LinkedIn</a></p>
-            <p><i class="fa fa-github w3-hover-opacity"></i> <a href="https://github.com/ujsolon">GitHub</a></p>
-            <p><i class="fa fa-wordpress w3-hover-opacity"></i> <a href="https://ujsolon.wordpress.com">Wordpress</a>
-            </p>
-            <p><i class="fa-brands fa-researchgate w3-hover-opacity"></i><a
-                href="https://www.researchgate.net/profile/Ulyses_Jr_Solon?ev=hdr_xprf">Researchgate</a></p>
-            <p><i class="fa fa-twitter w3-hover-opacity"></i> <a href="https://twitter.com/ujsolon">Twitter</a></p>
-            <br>
-          </div>
-        </div><br>
+    </div>
+  </div>
+  <br>
 
         <!-- End Left Column -->
       </div>
@@ -274,7 +359,7 @@
         <!-- Work Experience -->
         <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('workExperience')" style="cursor: pointer;">
-            <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
+            <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
             Work Experience
             <i class="fa fa-caret-down w3-right"></i>
           </h2>
@@ -282,7 +367,7 @@
             <div class="highlight-container">
               <div class="w3-container">
                 <h5 class="w3-opacity"><b>Development Team Lead / Accenture Inc.</b></h5>
-                <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2024 -Present</h6>
+                <h6 class="w3-text-theme"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2024 -Present</h6>
                 <p>Lead developers, providing mentorship and fostering a <span class="emphasis-word">collaborative
                     environment</span> to enhance team performance and skill development. Oversee the design,
                   development, and deployment of <span class="emphasis-word">AI-driven solutions</span>, ensuring
@@ -309,7 +394,7 @@
             <div class="highlight-container">
               <div class="w3-container">
                 <h5 class="w3-opacity"><b>AI Developer / Accenture Inc.</b></h5>
-                <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2023 - Jun 2024</h6>
+                <h6 class="w3-text-theme"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2023 - Jun 2024</h6>
                 <p>Developed a web app solution with integrated chat functionality, leveraging <span
                     class="emphasis-word">Retrieval-Augmented Generation (RAG)</span> for advanced knowledge querying
                   from user-uploaded databases. Responsible for coding, testing, and deploying code in the MS <span
@@ -335,7 +420,7 @@
                 <h5 class="w3-opacity"><b>Researcher/Instructor / Institute of Mathematics, University of the
                     Philippines
                     Diliman</b></h5>
-                <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2014 - Jun 2023</h6>
+                <h6 class="w3-text-theme"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2014 - Jun 2023</h6>
                 <p>Co-authored 5 peer-reviewed academic publications and <span class="emphasis-word">presented research
                     findings</span> at international conferences. Mentored over 1000 students, receiving an average to
                   <span class="emphasis-word">strongly positive</span> feedback from <span
@@ -360,7 +445,7 @@
         <!-- Portfolio Projects -->
         <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('portfolioProjects')" style="cursor: pointer;">
-            <i class="fa fa-code fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
+            <i class="fa fa-code fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
             Portfolio Projects
             <i class="fa fa-caret-down w3-right"></i>
           </h2>
@@ -429,20 +514,20 @@
           <!-- Education -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('education')" style="cursor: pointer;">
-              <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
+              <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
               Education
               <i class="fa fa-caret-down w3-right"></i>
             </h2>
             <div id="education">
               <div class="w3-container">
                 <h5 class="w3-opacity"><b>Université de Pau et des Pays de l'Adour</b></h5>
-                <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2018 - Sep 2021</h6>
+                <h6 class="w3-text-theme"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2018 - Sep 2021</h6>
                 <p>Doctoral Candidate (unfinished)</p>
                 <hr>
               </div>
               <div class="w3-container">
                 <h5 class="w3-opacity"><b>University of the Philippines, Diliman</b></h5>
-                <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2012 - Jan 2016</h6>
+                <h6 class="w3-text-theme"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2012 - Jan 2016</h6>
                 <p>Master of Science in Mathematics</p>
                 <hr>
               </div>
@@ -452,7 +537,7 @@
           <!-- Personal Life -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('personalLife')" style="cursor: pointer;">
-              <i class="fa fa-heart fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
+              <i class="fa fa-heart fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
               Personal Life
               <i class="fa fa-caret-down w3-right"></i>
             </h2>
