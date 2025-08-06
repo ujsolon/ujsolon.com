@@ -40,7 +40,6 @@ function renderNews(posts) {
             // Latest post - full content
             newsHtml += `
                 <div class="w3-container">
-                    <div class="latest-badge">Latest</div>
                     <h5 class="w3-opacity"><b>
                         ${post.url ? `<a href="${post.url}" target="_blank" rel="noopener" class="w3-text-theme" style="text-decoration: none;"><b>${post.title}</b></a>` : `<b>${post.title}</b>`}
                     </b></h5>

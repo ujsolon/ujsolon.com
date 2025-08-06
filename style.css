@@ -222,21 +222,6 @@
 
     /* Simple News Section Styling - Add this to your existing CSS */
 
-    .latest-badge {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        background: #8A2BE2;
-        color: white;
-        padding: 3px 8px;
-        border-radius: 12px;
-        font-size: 10px;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        z-index: 1;
-    }
-
     .loading-news {
         text-align: center;
         padding: 20px;
@@ -264,11 +249,6 @@
         padding: 8px 16px !important;
         transition: background-color 0.3s ease;
     }
-
-    /* .news-headline-only:hover {
-        background-color: rgba(138, 43, 226, 0.05);
-        border-radius: 4px;
-    } */
 
     .news-headline-only h6 {
         margin: 0 0 5px 0 !important;
