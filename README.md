@@ -6,7 +6,38 @@ Welcome! This repository contains the source code for my personal website, which
 
 ## Contents
 
-### Professional Experience
+### News
+
+The **News** section on the website displays recent updates and announcements, which are loaded dynamically from the `news.json` file.
+
+**How to update the News section:**
+- Open the [`news.json`](news.json) file in the project root.
+- Add, edit, or remove news items in the `"posts"` array. Each item should have:
+  - `title`: The headline of the news item.
+  - `content`: The main text or summary.
+  - `platform`: The source/platform (e.g., LinkedIn, GitHub).
+  - `date`: The date in `YYYY-MM-DD` format.
+  - `url`: (Optional) A link to the full post or announcement.
+- Only three topmost entries in `news.json` will be shown in the HTML output.
+- Rendering of the fetched results can sometimes take time. A previous CORS issue on the fetch was identified via console logs, but is not present in the Github Pages deployment.
+
+**Example:**
+```json
+{
+  "posts": [
+    {
+      "title": "Completing TechStar 2025 Journey",
+      "content": "I'm thrilled to share that I've successfully completed the TechStar 2025 Program! ...",
+      "platform": "LinkedIn",
+      "date": "2025-08-04",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7357906588973633536/"
+    }
+    // Add more news items here
+  ]
+}
+```
+The website will automatically display the latest
+### Work
 
 - **Development Team Lead / Accenture Inc.** (Jun 2024 - Present)  
   Lead developers, mentor team, oversee AI-driven solutions, drive technical strategy for scalable database and cloud infrastructure, coordinate with stakeholders.
@@ -22,7 +53,7 @@ Welcome! This repository contains the source code for my personal website, which
 
 ---
 
-### Portfolio Projects
+### Portfolio
 
 - **[QR Code Generative Imaging: Exploring ControlNet with Stable Diffusion](https://github.com/ujsolon/QR-code-generative-imaging)**  
   Combines QR codes with artistic image generation using Stable Diffusion and ControlNet. Explores aesthetics and functionality for digital/physical presentations.
@@ -44,7 +75,7 @@ Welcome! This repository contains the source code for my personal website, which
 
 ---
 
-### Personal Life
+### Personal
 
 Outside of work, I enjoy chess, Dota 2, basketball, jogging, and DIY projects. My experiences span summers in Laguna, university life in Diliman, and living in France during the pandemic.
 
