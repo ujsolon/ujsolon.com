@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "Microsoft Certified: Azure Administrator Associate (AZ-104)",
+      "content": "I’m happy to share that I’ve passed the Microsoft Certified: Azure Administrator Associate (AZ-104) certification from Microsoft! In my previous role, I gained experience not only in app development but also in solution design and system administration within the Microsoft Azure ecosystem. This certification validates those skills and represents an advancement in my professional journey....",
+      "platform": "LinkedIn",
+      "date": "2025-09-27",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7377453616514850816/"
+    },
+    {
       "title": "Call Centers vs Tariffs",
       "content": "This work takes you inside the evolving story of the Philippines’ IT-BPM industry, using visuals and data to reveal trends that are shaping its future. IT-BPM (Information Technology-Business Process Management) Industry in the Philippines: Challenges and Opportunities (Part1)...",
       "platform": "Wordpress",
