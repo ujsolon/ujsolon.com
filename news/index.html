@@ -1,121 +1,26 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>ujsolon website</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>News | Ulyses Solon</title>
   <meta charset="UTF-8">
-  <script src="https://kit.fontawesome.com/bb519b5f52.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    html,
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Roboto", sans-serif
-    }
-    
-    .section-footer {
-      margin-top: 10px;
-      margin-bottom: 15px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border-top: 1px solid #e0e0e0;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
+<body class="w3-light-grey">
 
-<body>
-
-  <!-- Page Container -->
   <div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-    <!-- The Grid -->
     <div class="w3-row-padding">
 
-      <!-- Left Column -->
-      <div class="w3-third">
-
-        <div class="w3-white w3-text-grey w3-card-4">
-    <div class="w3-display-container">
-        <img src="profileweb15jul2024.jpg" style="width:100%" alt="Avatar">
-        <div class="w3-display-bottomright w3-container w3-text-white">
-            <h2>Ulyses Solon</h2>
-        </div>
-    </div>
-    <div class="w3-container">
-        <p class="w3-large w3-text-theme"> • AI Developer • Technology Architect • Mentor •</p>
-        <hr>
-        
-        <div style="padding: 10px 0;">
-            <a href="mailto:ujsolon@gmail.com" class="icon-link w3-hover-opacity">
-                <i class="fa-regular   fa-envelope w3-text-black"></i>
-                <span class="tooltip">Email</span>
-            </a>
-
-            <a href="https://www.linkedin.com/in/ujsolon" class="icon-link w3-hover-opacity">
-                <i class="fa fa-linkedin w3-text-blue"></i>
-                <span class="tooltip">LinkedIn</span>
-            </a>
-            
-            <a href="https://github.com/ujsolon" class="icon-link w3-hover-opacity">
-                <i class="fa fa-github w3-text-dark-grey"></i>
-                <span class="tooltip">GitHub</span>
-            </a>
-            
-            <a href="https://ujsolon.wordpress.com" class="icon-link w3-hover-opacity">
-                <i class="fa fa-wordpress w3-text-blue"></i>
-                <span class="tooltip">WordPress</span>
-            </a>
-            
-            <a href="https://www.researchgate.net/profile/Ulyses_Jr_Solon?ev=hdr_xprf" class="icon-link w3-hover-opacity">
-                <i class="fa-brands fa-researchgate w3-text-teal"></i>
-                <span class="tooltip">ResearchGate</span>
-            </a>
-            
-            <a href="https://twitter.com/ujsolon" class="icon-link w3-hover-opacity">
-                <i class="fa fa-twitter w3-text-light-blue"></i>
-                <span class="tooltip">Twitter</span>
-            </a>
-
-            <a href="https://facebook.com/ujsolon" class="icon-link w3-hover-opacity">
-                <i class="fa fa-facebook w3-text-blue"></i>
-                <span class="tooltip">Facebook</span>
-            </a>
-            
-            <a href="https://youtube.com/@ujsolon" class="icon-link w3-hover-opacity">
-                <i class="fa fa-youtube w3-text-red"></i>
-                <span class="tooltip">YouTube</span>
-            </a>
-        </div>
-    </div>
-  </div>
-  <br>
-
-        <!-- End Left Column -->
-      </div>
-
-      <!-- Right Column -->
-
+      <!-- News Section -->
       <div class="w3-twothird">
-
-        <!-- News Section -->
         <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('news')" style="cursor: pointer;">
+          <h2 class="w3-text-grey w3-padding-16">
             <i class="fa fa-newspaper fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
             News
-            <i class="fa fa-caret-down w3-right"></i>
           </h2>
+
           <div id="news">
             <div id="newsContainer">
               <div class="loading-news">
@@ -123,304 +28,17 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Work Section -->
-        <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('workExperience')" style="cursor: pointer;">
-            <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
-            Work
-            <i class="fa fa-caret-down w3-right"></i>
-          </h2>
-          <div id="workExperience">
-            <div class="highlight-container">
-              <div class="w3-container">
-                <h5 class="w3-opacity"><b>Development Team Lead / Accenture Inc.</b></h5>
-                <h6 class="w3-text-theme"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2024 -Present</h6>
-                <p>Lead developers, providing mentorship and fostering a <span class="emphasis-word">collaborative
-                    environment</span> to enhance team performance and skill development. Oversee the design,
-                  development, and deployment of <span class="emphasis-word">AI-driven solutions</span>, ensuring
-                  adherence to best practices in technical architecture and coding standards. Drive the technical
-                  strategy and architecture for scalable and <span class="emphasis-word">efficient database design and
-                    cloud infrastructure</span>, leveraging advanced tools and methodologies. Coordinate
-                  cross-functional requirements, working closely with stakeholders to align technical objectives with
-                  business goals.</p>
-                
-                <div class="tech-section">
-                  <div class="tech-text">Key Technologies</div>
-                  <div class="tech-logos">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure DevOps" class="tech-logo" title="Azure DevOps">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" class="tech-logo" title="Terraform">
-                    <img src="https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.svg" alt="Database Design" class="tech-logo" title="Database Design">
-                    <img src="public\logos\MTA-Cube-423x420-Transparent.png" alt="Technology Architecture" class="tech-logo" title="Technology Architecture">
-                    <img src="public\logos\03513-icon-service-AI-Studio.svg" alt="Azure AI Foundry" class="tech-logo" title="Azure AI Foundry">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tech-logo" title="MongoDB">
-                  </div>
-                </div>
-              </div>
-              <hr>
-            </div>
-            <div class="highlight-container">
-              <div class="w3-container">
-                <h5 class="w3-opacity"><b>AI Developer / Accenture Inc.</b></h5>
-                <h6 class="w3-text-theme"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2023 - Jun 2024</h6>
-                <p>Developed a web app solution with integrated chat functionality, leveraging <span
-                    class="emphasis-word">Retrieval-Augmented Generation (RAG)</span> for advanced knowledge querying
-                  from user-uploaded databases. Responsible for coding, testing, and deploying code in the MS <span
-                    class="emphasis-word">Azure Cloud</span> environment under the <span
-                    class="emphasis-word">Serverless</span> architecture framework. Successfully transitioned the
-                  solution from company internal use to client projects, securing paying customers.</p>
-                
-                <div class="tech-section">
-                  <div class="tech-text">Key Technologies</div>
-                  <div class="tech-logos">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python AI/ML" class="tech-logo" title="Python AI/ML">
-                    <img src="https://python.langchain.com/img/brand/wordmark.png" alt="LangChain" class="tech-logo" title="LangChain">
-                    <img src="public\logos\10029-icon-service-Function-Apps.svg" alt="Azure Function App" class="tech-logo" title="Azure Function App">
-                    <img src="public\logos\10035-icon-service-App-Services.svg" alt="Azure App Service" class="tech-logo" title="Azure App Service">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tech-logo" title="PostgreSQL">
-                  </div>
-                </div>
-              </div>
-              <hr>
-            </div>
-            <div class="highlight-container">
-              <div class="w3-container">
-                <h5 class="w3-opacity"><b>Researcher/Instructor / Institute of Mathematics, University of the
-                    Philippines
-                    Diliman</b></h5>
-                <h6 class="w3-text-theme"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2014 - Jun 2023</h6>
-                <p>Co-authored 5 peer-reviewed academic publications and <span class="emphasis-word">presented research
-                    findings</span> at international conferences. Mentored over 1000 students, receiving an average to
-                  <span class="emphasis-word">strongly positive</span> feedback from <span
-                    class="emphasis-word">98%</span> of mentees. Organized talks and meetings with faculty members,
-                  fostering collaborations with external institutions.
-                </p>
-                
-                <div class="tech-section">
-                  <div class="tech-text">Key Technologies</div>
-                  <div class="tech-logos">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="tech-logo" title="TensorFlow">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google BigQuery" class="tech-logo" title="Google BigQuery">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo" title="Python">
-                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Stable Diffusion" class="tech-logo" title="Stable Diffusion">
-                  </div>
-                </div>
-              </div>
-              <hr>
-            </div>
-            
-            <div class="section-footer">
-              <a href="https://www.linkedin.com/in/ujsolon" target="_blank" class="w3-button w3-blue w3-margin-right"><i class="fa fa-linkedin"></i> LinkedIn</a>
-              <a href="mailto:ujsolon@gmail.com?subject=Request%20for%20Detailed%20CV&body=Hi%20Ulyses%2C%0A%0AI%20would%20like%20to%20request%20your%20detailed%20CV%20and%20professional%20experience%20documentation.%0A%0AThank%20you%21" class="w3-button w3-red"><i class="fa-regular   fa-envelope"></i> Request detailed CV</a>
-            </div>
+          <div class="section-footer">
+            <a href="https://ujsolon.com" class="w3-button w3-dark-grey w3-margin-right">
+              <i class="fa fa-home"></i> Back to Home
+            </a>
           </div>
         </div>
-        
-        <!-- Portfolio Section -->
-        <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('portfolioProjects')" style="cursor: pointer;">
-            <i class="fa fa-code fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
-            Portfolio
-            <i class="fa fa-caret-down w3-right"></i>
-          </h2>
-          <div id="portfolioProjects">
-
-            <div class="highlight-container">
-              <div class="w3-container">
-                <h5 class="w3-opacity"><b><a href="https://anoulam.vercel.app/">Ano Ulam?: AI-Powered Filipino Meal Planning Web App</a></b></h5>
-                <p><span class="emphasis-word">Ano Ulam?</span> is a full-stack AI-powered
-                  web app that simplifies meal planning and grocery shopping by suggesting recipes based on available ingredients 
-                  or generating shopping lists from a chosen dish. Built with a <span class="emphasis-word">FastAPI backend</span> 
-                  and a responsive <span class="emphasis-word">Next.js frontend</span>, it integrates 
-                  Google's <span class="emphasis-word">Gemini AI</span> to recommend localized Filipino recipes and 
-                  cooking instructions, and uses the <span class="emphasis-word">Cloudinary CDN</span> to fetch relevant dish images. 
-                  Users can filter by dietary preferences (e.g., vegan, gluten-free), view step-by-step instructions, 
-                  and reduce food waste through <span class="emphasis-word">personalized </span> recommendations. 
-                  The project emphasizes user experience, food accessibility, and intelligent
-                  <span class="emphasis-word"> automation</span> in daily cooking.</p>
-                
-                <div class="tech-section">
-                  <div class="tech-logos">
-                    <span class="tech-text">Key Technologies:</span>
-                    <img src="https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-black.svg" alt="Vercel" class="tech-logo" title="Vercel">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="tech-logo" title="Next.js">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js" class="tech-logo" title="React.js">
-                    <img src="public\logos\gemini-logo.png" alt="Gemini AI" class="tech-logo" title="Gemini AI">
-                    <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI" class="tech-logo" title="FastAPI">
-                    <img src="public\logos\cloudinary-logo.png" alt="Cloudinary" class="tech-logo" title="Cloudinary">
-                  </div>
-                </div>
-                <hr>
-              </div>
-            </div>
-
-            <div class="highlight-container">
-              <div class="w3-container">
-                <h5 class="w3-opacity"><b><a href="https://github.com/ujsolon/QR-code-generative-imaging">QR Code
-                      Generative Imaging:
-                      Exploring ControlNet with Stable Diffusion</a></b></h5>
-
-                <p> <span class="emphasis-word"> QR Code Generative Imaging</span> explores the innovative combination
-                  of functional QR codes with artistic image generation using the <span class="emphasis-word">Stable
-                    Diffusion neural network</span> model and ControlNet. This project aims to create visually
-                  compelling images conditioned on QR code inputs, balancing aesthetics with functionality. By employing
-                  the <span class="emphasis-word">AUTOMATIC1111</span> Stable Diffusion GUI and leveraging various
-                  checkpoints like Dreamshaper and RevAnimated, diverse styles and outputs were tested. Despite initial
-                  challenges, including significant processing times, the project <span
-                    class="emphasis-word">successfully generated scannable QR codes</span> embedded within intricate
-                  designs. These outputs have potential applications in enhancing the visual appeal of digital and
-                  physical presentations, adding a decorative element while maintaining QR code functionality.
-                </p>
-                
-                <div class="tech-section">
-                  <div class="tech-logos">
-                    <span class="tech-text">Key Technologies:</span>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo" title="Python">
-                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" class="tech-logo" title="Hugging Face">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" class="tech-logo" title="PyTorch">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" class="tech-logo" title="Scikit-learn">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" class="tech-logo" title="Jupyter Notebook">
-                  </div>
-                </div>
-              </div>
-              <hr>
-            </div>
-            <div class="highlight-container">
-              <div class="w3-container">
-                <h5 class="w3-opacity"><b><a href="https://github.com/ujsolon/NBASeriesML">NBASeriesML: Predicting Game
-                      7 Outcomes in NBA Playoffs</a></b></h5>
-                <p><span class="emphasis-word">NBA Series ML</span> is a <span class="emphasis-word">machine learning</span> 
-                  project that predicts outcomes of NBA Game 7 matchups using <span class="emphasis-word">logistic regression</span> 
-                  trained on point differentials from 147 historical games. Initially applied to the 2023 Celtics–Heat series with a 
-                  55% Miami win prediction, the model was later extended to analyze the 2025 Oklahoma City Thunder–Indiana Pacers finals, 
-                  outputting a 71% win probability for OKC. The model is implemented in Python with <span class="emphasis-word">NumPy</span> 
-                  and trained via <span class="emphasis-word">batch gradient descent</span>, using six-game input vectors. 
-                  This project showcases how <span class="emphasis-word">data-driven</span> approaches can enhance forecasting and strategy 
-                  in professional basketball through interpretable statistical modeling.
-                </p>
-                
-                <div class="tech-section">
-                  <div class="tech-logos">
-                    <span class="tech-text">Key Technologies:</span>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo" title="Python">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="tech-logo" title="Pandas">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" class="tech-logo" title="NumPy">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" class="tech-logo" title="Scikit-learn">
-                    <img src="https://matplotlib.org/stable/_images/sphx_glr_logos2_003.png" alt="Matplotlib" class="tech-logo" title="Matplotlib">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" class="tech-logo" title="Jupyter Notebook">
-                  </div>
-                </div>
-                <hr>
-              </div>
-            </div>
-            
-            <div class="section-footer">
-              <a href="https://github.com/ujsolon" target="_blank" class="w3-button w3-dark-grey w3-margin-right"><i class="fa fa-github"></i> GitHub</a>
-              <a href="mailto:ujsolon@gmail.com?subject=Request%20for%20Full%20Portfolio&body=Hi%20Ulyses%2C%0A%0AI%20would%20like%20to%20request%20your%20complete%20portfolio%20documentation%20including%20additional%20projects%20and%20technical%20details.%0A%0AThank%20you%21" class="w3-button w3-red"><i class="fa-regular   fa-envelope"></i> Request full portfolio</a>
-            </div>
-          </div>
-        </div>
-        
-          <!-- Education Section -->
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('education')" style="cursor: pointer;">
-              <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
-              Education
-              <i class="fa fa-caret-down w3-right"></i>
-            </h2>
-            <div id="education">
-              <div class="w3-container">
-                <h5 class="w3-opacity"><b>Université de Pau et des Pays de l'Adour</b></h5>
-                <h6 class="w3-text-theme"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2018 - Sep 2021</h6>
-                <p>Doctoral Candidate (unfinished)</p>
-                <hr>
-              </div>
-              <div class="w3-container">
-                <h5 class="w3-opacity"><b>University of the Philippines, Diliman</b></h5>
-                <h6 class="w3-text-theme"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2012 - Jan 2016</h6>
-                <p>Master of Science in Mathematics</p>
-                <hr>
-              </div>
-              
-              <div class="section-footer">
-                <a href="https://www.researchgate.net/profile/Ulyses_Jr_Solon?ev=hdr_xprf" target="_blank" class="w3-button w3-teal w3-margin-right"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
-                <a href="mailto:ujsolon@gmail.com?subject=Request%20for%20Educational%20Background&body=Hi%20Ulyses%2C%0A%0AI%20would%20like%20to%20request%20detailed%20information%20about%20your%20educational%20background%2C%20academic%20achievements%2C%20and%20research%20publications.%0A%0AThank%20you%21" class="w3-button w3-red"><i class="fa-regular   fa-envelope"></i> Request detailed education</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Personal Section -->
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16" onclick="toggleSection('personalLife')" style="cursor: pointer;">
-              <i class="fa fa-heart fa-fw w3-margin-right w3-xxlarge w3-text-theme"></i>
-              Personal
-              <i class="fa fa-caret-down w3-right"></i>
-            </h2>
-            <div id="personalLife">
-              <div class="w3-container">
-                <p> Outside of work, I'm a person with diverse interests, now embracing the responsibility of new
-                  fatherhood. I enjoy strategic games like chess and Dota 2, while staying active with basketball and
-                  the
-                  occasional jogs. DIY projects around the house are a satisfying pastime. My experiences range from
-                  childhood summers in San Pablo, Laguna, to staying near the university during my college instructor
-                  days, to a few years living in France during the pandemic. Wherever life takes me, I go. </p>
-
-                <!-- Image Gallery -->
-                <div class="w3-row-padding" style="margin:0 -16px">
-                  <div class="w3-third">
-                    <a href="galeryweb15jul2024_1.jpg" target="_blank">
-                      <img src="galeryweb15jul2024_1.jpg" style="width:100%" alt="Masters graduation with Mom"
-                        class="w3-hover-opacity">
-                    </a>
-                    <p>Celebrating a significant milestone in my academic journey, shared with the unwavering support of
-                      my mother.</p>
-                  </div>
-                  <div class="w3-third">
-                    <a href="galeryweb15jul2024_2.jpg" target="_blank">
-                      <img src="galeryweb15jul2024_2.jpg" style="width:100%" alt="Sunshine along the Seine with Wife"
-                        class="w3-hover-opacity">
-                    </a>
-                    <p>A cherished moment in Paris, enjoying the city's beauty with my life partner.</p>
-                  </div>
-                  <div class="w3-third">
-                    <a href="galeryweb15jul2024_3.jpg" target="_blank">
-                      <img src="galeryweb15jul2024_3.jpg" style="width:100%" alt="Christmas photo with Baby"
-                        class="w3-hover-opacity">
-                    </a>
-                    <p>Our first holiday season as a family of three, marking a new chapter filled with joy and wonder.
-                    </p>
-                  </div>
-                </div>
-                
-                <div class="section-footer">
-                  <a href="https://ujsolon.wordpress.com" target="_blank" class="w3-button w3-blue w3-margin-right w3-margin-bottom"><i class="fa fa-wordpress"></i> Blog</a>
-                  <a href="https://twitter.com/ujsolon" target="_blank" class="w3-button w3-light-blue w3-margin-right w3-margin-bottom"><i class="fa fa-twitter"></i> Twitter</a>
-                  <a href="https://facebook.com/ujsolon" target="_blank" class="w3-button w3-indigo w3-margin-right w3-margin-bottom"><i class="fa fa-facebook"></i> Facebook</a>
-                  <a href="https://youtube.com/@ujsolon" target="_blank" class="w3-button w3-red w3-margin-bottom"><i class="fa fa-youtube"></i> YouTube</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- End Right Column -->
-        </div>
-
-        <!-- End Grid -->
-      </div>
-
-      <!-- End Page Container -->
-    </div>
-
-    <!-- Footer with Disclaimer -->
-    <div class="footer">
-      <div class="disclaimer">
-        <p>All trademarks, logos and brand names are the property of their respective owners.</p>
-        <p>&copy; 2024 Ulyses Solon. All rights reserved.</p>
       </div>
     </div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
-
 </html>
