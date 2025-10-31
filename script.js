@@ -9,17 +9,18 @@ async function loadNews() {
     const newsContainer = document.getElementById("newsContainer");
     const loadMoreContainer = document.getElementById("loadMoreContainer");
 
-    const response = await fetch(isNewsPage() ? "/news/news.json" : "/news.json");
+    // Always fetch from /news/news.json
+    const response = await fetch("/news/news.json");
     newsData = await response.json();
 
     // Clear any loading text
     newsContainer.innerHTML = "";
 
-    // Render first batch only
+    // Render first batch
     renderNews();
 
-    // Show load more button if there's more to show
-    if (displayedCount < newsData.length) {
+    // Show load more button ONLY if we're on /news page AND there's more to show
+    if (isNewsPage() && displayedCount < newsData.length) {
       loadMoreContainer.style.display = "block";
 
       const loadMoreButton = document.getElementById("loadMoreButton");
@@ -35,7 +36,10 @@ async function loadNews() {
 function renderNews() {
   const newsContainer = document.getElementById("newsContainer");
 
-  const nextBatch = newsData.slice(displayedCount, displayedCount + NEWS_BATCH_SIZE);
+  // If on home page, only show first 3 items ever
+  const maxItems = isNewsPage() ? displayedCount + NEWS_BATCH_SIZE : NEWS_BATCH_SIZE;
+  const nextBatch = newsData.slice(displayedCount, Math.min(maxItems, newsData.length));
+  
   nextBatch.forEach(post => {
     const div = document.createElement("div");
     div.classList.add("news-item", "w3-margin-bottom");
@@ -51,9 +55,12 @@ function renderNews() {
 
   displayedCount += nextBatch.length;
 
-  // Hide button if we've shown everything
-  if (displayedCount >= newsData.length) {
-    document.getElementById("loadMoreContainer").style.display = "none";
+  // Hide button if we've shown everything (only relevant on /news page)
+  if (isNewsPage() && displayedCount >= newsData.length) {
+    const loadMoreContainer = document.getElementById("loadMoreContainer");
+    if (loadMoreContainer) {
+      loadMoreContainer.style.display = "none";
+    }
   }
 }
 
