@@ -5,7 +5,7 @@ async function loadNews() {
     const newsContainer = document.getElementById('newsContainer');
     
     try {
-        const response = await fetch('news.json');
+        const response = await fetch('/news/news.json');
         
         if (!response.ok) {
             throw new Error('News data not available');
