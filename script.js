@@ -15,11 +15,11 @@ async function loadNews() {
     // Clear any loading text
     newsContainer.innerHTML = "";
 
-    // Render first batch
+    // Render first batch only
     renderNews();
 
-    // Show load more button if we're on /news and there’s more to show
-    if (isNewsPage() && newsData.length > NEWS_BATCH_SIZE) {
+    // Show load more button if there's more to show
+    if (displayedCount < newsData.length) {
       loadMoreContainer.style.display = "block";
 
       const loadMoreButton = document.getElementById("loadMoreButton");
@@ -51,7 +51,7 @@ function renderNews() {
 
   displayedCount += nextBatch.length;
 
-  // Hide button if we’ve shown everything
+  // Hide button if we've shown everything
   if (displayedCount >= newsData.length) {
     document.getElementById("loadMoreContainer").style.display = "none";
   }
@@ -64,10 +64,6 @@ function loadMoreNews() {
 function isNewsPage() {
   return window.location.pathname.includes("/news");
 }
-
-document.addEventListener("DOMContentLoaded", loadNews);
-
-
 
 function showNoNews() {
     const newsContainer = document.getElementById('newsContainer');
