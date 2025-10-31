@@ -105,19 +105,31 @@ function showNoNews() {
 }
 
 function getPlatformIcon(platform) {
-    const icons = {
-        'linkedin': 'fa-linkedin',
-        'twitter': 'fa-twitter',
-        'x': 'fa-twitter',
-        'facebook': 'fa-facebook',
-        'youtube': 'fa-youtube',
-        'github': 'fa-github',
-        'wordpress': 'fa-wordpress',
-        'blog': 'fa-pencil',
-        'website': 'fa-globe'
+    const brands = {
+        'linkedin': 'linkedin',
+        'twitter': 'twitter',
+        'x': 'x-twitter',
+        'facebook': 'facebook',
+        'youtube': 'youtube',
+        'github': 'github',
+        'wordpress': 'wordpress'
     };
-    return icons[platform.toLowerCase()] || 'fa-link';
+
+    const solids = {
+        'blog': 'pencil-alt',
+        'website': 'globe',
+        'default': 'link'
+    };
+
+    if (brands[platform?.toLowerCase()]) {
+        return `fa-brands fa-${brands[platform.toLowerCase()]}`;
+    } else if (solids[platform?.toLowerCase()]) {
+        return `fa-solid fa-${solids[platform.toLowerCase()]}`;
+    } else {
+        return `fa-solid fa-${solids.default}`;
+    }
 }
+
 
 function formatDate(dateString) {
     const date = new Date(dateString);
