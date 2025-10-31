@@ -1,47 +1,53 @@
 // Complete script.js file - cleaned up and fixed
 
-// Simple News Section JavaScript
+let allNewsPosts = [];
+let displayedCount = 0;
+const POSTS_PER_PAGE = 3;
+
 async function loadNews() {
     const newsContainer = document.getElementById('newsContainer');
-    
+    const loadMoreContainer = document.getElementById('loadMoreContainer');
+
     try {
         const response = await fetch('/news/news.json');
-        
-        if (!response.ok) {
-            throw new Error('News data not available');
-        }
-        
+        if (!response.ok) throw new Error('News data not available');
         const newsData = await response.json();
-        
+
         if (newsData.posts && newsData.posts.length > 0) {
-            renderNews(newsData.posts);
+            allNewsPosts = newsData.posts;
+            renderNews();
+
+            // Show Load More button if more posts remain AND on /news page
+            if (isNewsPage() && allNewsPosts.length > POSTS_PER_PAGE) {
+                loadMoreContainer.style.display = 'block';
+                document.getElementById('loadMoreButton').addEventListener('click', loadMoreNews);
+            }
         } else {
             showNoNews();
         }
-        
     } catch (error) {
-        console.log('Could not load news data:', error);
+        console.error('Could not load news data:', error);
         showNoNews();
     }
 }
 
-function renderNews(posts) {
+function renderNews() {
     const newsContainer = document.getElementById('newsContainer');
+
+    // Calculate how many posts to show
+    const nextCount = Math.min(displayedCount + POSTS_PER_PAGE, allNewsPosts.length);
+    const postsToRender = allNewsPosts.slice(0, nextCount);
+
     let newsHtml = '';
-    
-    // Show only first 3 posts maximum
-    const postsToShow = posts.slice(0, 3);
-    
-    postsToShow.forEach((post, index) => {
+    postsToRender.forEach((post, index) => {
         const isLatest = index === 0;
-        const isHeadlineOnly = index > 0; // Posts 2 and 3 are headline-only
-        
+        const isHeadlineOnly = index > 0;
+
         if (isLatest) {
-            // Latest post - full content
             newsHtml += `
                 <div class="w3-container">
                     <h5 class="w3-opacity"><b>
-                        ${post.url ? `<a href="${post.url}" target="_blank" rel="noopener" class="w3-text-theme" style="text-decoration: none;"><b>${post.title}</b></a>` : `<b>${post.title}</b>`}
+                        ${post.url ? `<a href="${post.url}" target="_blank" class="w3-text-theme" style="text-decoration:none;"><b>${post.title}</b></a>` : `<b>${post.title}</b>`}
                     </b></h5>
                     <h6 class="w3-text-theme">
                         <i class="fa ${getPlatformIcon(post.platform)} fa-fw w3-margin-right"></i>
@@ -52,24 +58,40 @@ function renderNews(posts) {
                 <hr>
             `;
         } else {
-            // Other posts - headline and platform only
             newsHtml += `
                 <div class="w3-container news-headline-only">
                     <h6 class="w3-opacity">
-                        ${post.url ? `<a href="${post.url}" target="_blank" rel="noopener" class="w3-text-theme" style="text-decoration: none;"><b>${post.title}</b></a>` : `<b>${post.title}</b>`}
+                        ${post.url ? `<a href="${post.url}" target="_blank" class="w3-text-theme" style="text-decoration:none;"><b>${post.title}</b></a>` : `<b>${post.title}</b>`}
                     </h6>
-                    <p class="w3-text-theme" style="font-size: 13px; margin: 5px 0;">
+                    <p class="w3-text-theme" style="font-size:13px;margin:5px 0;">
                         <i class="fa ${getPlatformIcon(post.platform)} fa-fw"></i>
                         ${formatDate(post.date)} • ${post.platform}
                     </p>
                 </div>
-                ${index < postsToShow.length - 1 ? '<hr style="margin: 10px 0;">' : ''}
+                ${index < postsToRender.length - 1 ? '<hr style="margin:10px 0;">' : ''}
             `;
         }
     });
-    
+
     newsContainer.innerHTML = newsHtml;
+    displayedCount = nextCount;
+
+    // Hide the "Load More" button when all posts are shown
+    if (displayedCount >= allNewsPosts.length) {
+        const loadMoreContainer = document.getElementById('loadMoreContainer');
+        if (loadMoreContainer) loadMoreContainer.style.display = 'none';
+    }
 }
+
+function loadMoreNews() {
+    renderNews();
+}
+
+// Detect if current page is /news or /news/index.html
+function isNewsPage() {
+    return window.location.pathname.includes('/news');
+}
+
 
 function showNoNews() {
     const newsContainer = document.getElementById('newsContainer');
