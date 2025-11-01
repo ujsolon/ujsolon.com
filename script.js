@@ -33,6 +33,7 @@ async function loadNews() {
 
 function renderNews() {
     const newsContainer = document.getElementById('newsContainer');
+    const isFullNewsPage = isNewsPage();
 
     // Calculate how many posts to show
     const nextCount = Math.min(displayedCount + POSTS_PER_PAGE, allNewsPosts.length);
@@ -41,47 +42,37 @@ function renderNews() {
     let newsHtml = '';
     postsToRender.forEach((post, index) => {
         const isLatest = index === 0;
-        const isHeadlineOnly = index > 0;
 
-        if (isLatest) {
-            newsHtml += `
-                <div class="w3-container">
-                    <h5 class="w3-opacity"><b>
-                        ${post.url ? `<a href="${post.url}" target="_blank" class="w3-text-theme" style="text-decoration:none;"><b>${post.title}</b></a>` : `<b>${post.title}</b>`}
-                    </b></h5>
-                    <h6 class="w3-text-theme">
-                        <i class="fa ${getPlatformIcon(post.platform)} fa-fw w3-margin-right"></i>
-                        ${formatDate(post.date)} • ${post.platform}
-                    </h6>
-                    <p>${post.content}</p>
-                </div>
-                <hr>
-            `;
-        } else {
-            newsHtml += `
-                <div class="w3-container news-headline-only">
-                    <h6 class="w3-opacity">
-                        ${post.url ? `<a href="${post.url}" target="_blank" class="w3-text-theme" style="text-decoration:none;"><b>${post.title}</b></a>` : `<b>${post.title}</b>`}
-                    </h6>
-                    <p class="w3-text-theme" style="font-size:13px;margin:5px 0;">
-                        <i class="fa ${getPlatformIcon(post.platform)} fa-fw"></i>
-                        ${formatDate(post.date)} • ${post.platform}
-                    </p>
-                </div>
-                ${index < postsToRender.length - 1 ? '<hr style="margin:10px 0;">' : ''}
-            `;
-        }
+        // Show content on /news page OR for the latest post on home page
+        const showFullContent = isFullNewsPage || isLatest;
+
+        newsHtml += `
+            <div class="w3-container ${!showFullContent ? 'news-headline-only' : ''}">
+                <h5 class="w3-opacity"><b>
+                    ${post.url
+                        ? `<a href="${post.url}" target="_blank" class="w3-text-theme" style="text-decoration:none;"><b>${post.title}</b></a>`
+                        : `<b>${post.title}</b>`}
+                </b></h5>
+                <h6 class="w3-text-theme">
+                    <i class="${getPlatformIcon(post.platform)} fa-fw w3-margin-right"></i>
+                    ${formatDate(post.date)} • ${post.platform}
+                </h6>
+                ${showFullContent ? `<p>${post.content}</p>` : ''}
+            </div>
+            <hr>
+        `;
     });
 
     newsContainer.innerHTML = newsHtml;
     displayedCount = nextCount;
 
-    // Hide the "Load More" button when all posts are shown
-    if (displayedCount >= allNewsPosts.length) {
-        const loadMoreContainer = document.getElementById('loadMoreContainer');
-        if (loadMoreContainer) loadMoreContainer.style.display = 'none';
+    // Hide Load More when done
+    const loadMoreContainer = document.getElementById('loadMoreContainer');
+    if (displayedCount >= allNewsPosts.length && loadMoreContainer) {
+        loadMoreContainer.style.display = 'none';
     }
 }
+
 
 function loadMoreNews() {
     renderNews();
