@@ -54,7 +54,7 @@ The **News** section on the website displays recent updates and announcements, w
 ```
 The how page will automatically display the latest items.
 
-To access previously displayed info, go to [https://news.ujsolon.com/](https://news.ujsolon.com/)
+To access previously displayed info, go to [https://ujsolon.com/news](https://ujsolon.com/news)
 
 ## Work Experience
 

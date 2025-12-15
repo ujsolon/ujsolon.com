@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "title": "100 Applications Later: A Snapshot of the PH Job Market (Nov 2025)",
+      "content": "It was an unfortunate scenario that I was dragged back to job hunting months after I just did one, but here we are...",
+      "platform": "Wordpress",
+      "date": "2025-12-15",
+      "url": "https://ujsolon.wordpress.com/2025/12/15/100-applications-later-a-snapshot-of-the-ph-job-market-nov-2025/"
+    },
+    {
       "title": "Microsoft Certified: Azure Administrator Associate (AZ-104)",
       "content": "I’m happy to share that I’ve passed the Microsoft Certified: Azure Administrator Associate (AZ-104) certification from Microsoft! In my previous role, I gained experience not only in app development but also in solution design and system administration within the Microsoft Azure ecosystem. This certification validates those skills and represents an advancement in my professional journey....",
       "platform": "LinkedIn",
