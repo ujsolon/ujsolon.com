@@ -1,6 +1,27 @@
 {
   "posts": [
     {
+      "title": "What winning teams are made of",
+      "content": "1. Communication. Knowing what the other person means with just a yes or no 2....",
+      "platform": "LinkedIn",
+      "date": "2026-05-21",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7463437702290382849/"
+    },
+    {
+      "title": "Connections don't just happen",
+      "content": "I don't consider myself a mobile gamer, so I'm a bit skeptical when I was invited to the ML (Mobile Legends) team-building event...",
+      "platform": "LinkedIn",
+      "date": "2026-04-24",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7454824597931315201/"
+    },
+    {
+      "title": "Microsoft Certified: Agentic AI Business Solutions Architect(AB-100)",
+      "content": "Earned my first Advanced-level certification from Microsoft! Really enjoyed building on my experience with MS Copilot Studio, MS Foundry, and Azure OpenAI while diving deeper into agent-based solutions...",
+      "platform": "LinkedIn",
+      "date": "2026-04-01",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7445432216698097664/"
+    },
+    {
       "title": "100 Applications Later: A Snapshot of the PH Job Market (Nov 2025)",
       "content": "It was an unfortunate scenario that I was dragged back to job hunting months after I just did one, but here we are...",
       "platform": "Wordpress",
