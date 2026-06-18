@@ -104,7 +104,7 @@ function showNoNews() {
     const newsContainer = document.getElementById('newsContainer');
     newsContainer.innerHTML = `
         <div class="w3-container">
-            <p style="text-align: center; color: #8A2BE2; font-style: italic;">
+            <p style="text-align: center; color: #86BC24; font-style: italic;">
                 <i class="fa fa-info-circle"></i> No recent updates available.
             </p>
         </div>

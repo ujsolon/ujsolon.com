@@ -1,33 +1,68 @@
 
+    :root {
+      --brand-green: #86BC24;
+      --brand-black: #000000;
+      --brand-black-soft: #0F0B0B;
+      --brand-white: #FFFFFF;
+      --brand-gray: #53565A;
+      --brand-surface: #F5F6F3;
+      --brand-border: #D9DDD2;
+      --brand-shadow: rgba(15, 11, 11, 0.12);
+    }
+
     body {
-      background-color: #E6E6FA;
-      /* Light shade of violet */
+      background-color: var(--brand-surface);
     }
 
     .w3-card-4 {
-      background-color: #F8F8FF;
-      /* GhostWhite for a lighter card background */
+      background-color: var(--brand-white);
+      box-shadow: 0 8px 24px var(--brand-shadow);
     }
 
     .w3-text-red,
     .w3-hover-opacity:hover {
-      color: #f44336 !important;
-      /* BlueViolet for text and hover effects */
+      color: var(--brand-green) !important;
     }
 
     .w3-light-grey {
-      background-color: #E6E6FA;
-      /* Matching the background */
+      background-color: var(--brand-surface);
     }
 
     .w3-text-theme {
-      color: #8A2BE2 !important;
-      /* BlueViolet for themed text */
+      color: var(--brand-green) !important;
     }
 
     .w3-container {
-      color: #4B0082;
-      /* Indigo for container text */
+      color: var(--brand-gray);
+    }
+
+    .w3-white,
+    .w3-card,
+    .w3-card-4 {
+      background-color: var(--brand-white) !important;
+    }
+
+    .w3-text-grey,
+    .w3-opacity b,
+    .w3-container h5,
+    .w3-container h2 {
+      color: var(--brand-black-soft) !important;
+    }
+
+    .w3-container p,
+    .w3-container li,
+    .w3-container span,
+    .w3-container h6 {
+      color: var(--brand-gray);
+    }
+
+    .w3-container a {
+      color: var(--brand-black-soft);
+      transition: color 0.3s ease;
+    }
+
+    .w3-container a:hover {
+      color: var(--brand-green);
     }
 
     /* For skill bars */
@@ -77,8 +112,8 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background-color: #8A2BE2;
-      opacity: 0.2;
+      background-color: var(--brand-green);
+      opacity: 0.18;
       z-index: -1;
       border-radius: 3px;
     }
@@ -98,9 +133,9 @@
     .tech-section {
       margin-top: 15px;
       padding: 15px;
-      background-color: #f8f9fa;
+      background-color: var(--brand-surface);
       border-radius: 8px;
-      /* border-left: 4px solid #8A2BE2; */
+      border-left: 4px solid var(--brand-green);
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
@@ -143,7 +178,7 @@
       margin-bottom: 8px;
       text-align: center;
       width: 100%;
-      color: #8A2BE2;
+      color: var(--brand-green);
       filter: grayscale(100%);
       transition: all 0.3s ease;
     }
@@ -154,8 +189,8 @@
 
     /* Footer styling */
     .footer {
-      background-color: #4B0082;
-      color: white;
+      background-color: var(--brand-black-soft);
+      color: var(--brand-white);
       text-align: center;
       padding: 20px;
       margin-top: 40px;
@@ -193,8 +228,8 @@
         bottom: 125%;
         left: 50%;
         transform: translateX(-50%);
-        background-color: #333;
-        color: white;
+        background-color: var(--brand-black-soft);
+        color: var(--brand-white);
         text-align: center;
         padding: 5px 8px;
         border-radius: 4px;
@@ -212,7 +247,7 @@
         margin-left: -5px;
         border-width: 5px;
         border-style: solid;
-        border-color: #333 transparent transparent transparent;
+        border-color: var(--brand-black-soft) transparent transparent transparent;
     }
     
     .icon-link:hover .tooltip {
@@ -225,7 +260,7 @@
     .loading-news {
         text-align: center;
         padding: 20px;
-        color: #8A2BE2;
+        color: var(--brand-green);
         font-style: italic;
     }
 
@@ -240,7 +275,7 @@
     }
 
     .w3-container a.w3-text-theme:hover {
-        color: #9370DB !important;
+        color: var(--brand-black-soft) !important;
         text-decoration: underline !important;
     }
 
@@ -257,4 +292,122 @@
 
     .news-headline-only p {
         margin: 0 !important;
+    }
+
+    .brand-button {
+      background-color: var(--brand-black-soft) !important;
+      color: var(--brand-white) !important;
+      border: 1px solid var(--brand-black-soft);
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .brand-button:hover {
+      background-color: var(--brand-green) !important;
+      border-color: var(--brand-green) !important;
+      color: var(--brand-black-soft) !important;
+    }
+
+    .brand-button--accent {
+      background-color: var(--brand-green) !important;
+      border-color: var(--brand-green) !important;
+      color: var(--brand-black-soft) !important;
+    }
+
+    .brand-button--accent:hover {
+      background-color: var(--brand-black-soft) !important;
+      border-color: var(--brand-black-soft) !important;
+      color: var(--brand-white) !important;
+    }
+
+    .brand-icon {
+      color: var(--brand-black-soft) !important;
+    }
+
+    .brand-icon--accent {
+      color: var(--brand-green) !important;
+    }
+
+    .social-email {
+      color: var(--brand-black-soft) !important;
+    }
+
+    .social-linkedin {
+      color: #0A66C2 !important;
+    }
+
+    .social-github {
+      color: #24292F !important;
+    }
+
+    .social-wordpress {
+      color: #21759B !important;
+    }
+
+    .social-researchgate {
+      color: #00CCBB !important;
+    }
+
+    .social-twitter {
+      color: #1DA1F2 !important;
+    }
+
+    .social-facebook {
+      color: #1877F2 !important;
+    }
+
+    .social-youtube {
+      color: #FF0000 !important;
+    }
+
+    .platform-button {
+      color: var(--brand-white) !important;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    }
+
+    .platform-button:hover {
+      color: var(--brand-white) !important;
+      opacity: 0.92;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+    }
+
+    .platform-button--email {
+      background-color: #D44638 !important;
+      border-color: #D44638 !important;
+    }
+
+    .platform-button--linkedin {
+      background-color: #0A66C2 !important;
+      border-color: #0A66C2 !important;
+    }
+
+    .platform-button--github {
+      background-color: #24292F !important;
+      border-color: #24292F !important;
+    }
+
+    .platform-button--wordpress {
+      background-color: #21759B !important;
+      border-color: #21759B !important;
+    }
+
+    .platform-button--researchgate {
+      background-color: #00A99D !important;
+      border-color: #00A99D !important;
+    }
+
+    .platform-button--twitter {
+      background-color: #1DA1F2 !important;
+      border-color: #1DA1F2 !important;
+    }
+
+    .platform-button--facebook {
+      background-color: #1877F2 !important;
+      border-color: #1877F2 !important;
+    }
+
+    .platform-button--youtube {
+      background-color: #FF0000 !important;
+      border-color: #FF0000 !important;
     }
