@@ -50,7 +50,7 @@ function renderNews() {
                 <div class="w3-container">
                     <h5 class="w3-opacity"><b>
                         ${post.url
-                            ? `<a href="${post.url}" target="_blank" class="w3-text-theme" style="text-decoration:none;"><b>${post.title}</b></a>`
+                            ? `<a href="${post.url}" target="_blank" rel="noopener noreferrer" class="w3-text-theme" style="text-decoration:none;"><b>${post.title}</b></a>`
                             : `<b>${post.title}</b>`}
                     </b></h5>
                     <h6 class="w3-text-theme">
@@ -67,7 +67,7 @@ function renderNews() {
                 <div class="w3-container news-headline-only">
                     <h6 class="w3-opacity">
                         ${post.url
-                            ? `<a href="${post.url}" target="_blank" class="w3-text-theme" style="text-decoration:none;"><b>${post.title}</b></a>`
+                            ? `<a href="${post.url}" target="_blank" rel="noopener noreferrer" class="w3-text-theme" style="text-decoration:none;"><b>${post.title}</b></a>`
                             : `<b>${post.title}</b>`}
                     </h6>
                     <p class="w3-text-theme" style="font-size:13px;margin:5px 0;">
