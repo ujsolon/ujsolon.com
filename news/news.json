@@ -1,6 +1,20 @@
 {
   "posts": [
     {
+      "title": "Deprecated: Gone but Not Forgotten",
+      "content": "I was reviewing a pool of questions for a technical interview when I passed by a question that went: “In the LLM setting, what is temperature / top-p / top-k?”...",
+      "platform": "Wordpress",
+      "date": "2026-08-12",
+      "url": "https://ujsolon.wordpress.com/2026/08/12/deprecated-gone-but-not-forgotten/"
+    },
+    {
+      "title": "Gemini Enterprise",
+      "content": "Dude why even provide Gemini enterprise if both Code Assist and Antigravity are blocked",
+      "platform": "Twitter",
+      "date": "2026-08-07",
+      "url": "https://x.com/ujsolon/status/2085541998711419236"
+    },
+    {
       "title": "My Dad Is a Fixer",
       "content": "I never thought one of the highest acknowledgments of my abilities would come from my three-year-old son...",
       "platform": "Wordpress",
