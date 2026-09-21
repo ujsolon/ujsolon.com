@@ -1,6 +1,27 @@
 {
   "posts": [
     {
+      "title": "Software Freedom Day 2026 - End of Event Post",
+      "content": "Had a blast speaking at Software Freedom Day 2026! To anyone I interacted with during the event, feel free to add...",
+      "platform": "Facebook",
+      "date": "2026-09-20",
+      "url": "https://www.facebook.com/wpugph/posts/pfbid02nMWWw6FJU6rT9Rv9wnjNCAnrYrQxDRHTvu2cmGYHyxn6ffW87tJaMaJYbjz5fxtgl/"
+    },
+    {
+      "title": "Software Freedom Day 2026 - Introducting Speaker #1",
+      "content": "What does software development look like when AI agents become part of the entire development lifecycle?..",
+      "platform": "Facebook",
+      "date": "2026-09-15",
+      "url": "https://www.facebook.com/wpugph/posts/pfbid02nMWWw6FJU6rT9Rv9wnjNCAnrYrQxDRHTvu2cmGYHyxn6ffW87tJaMaJYbjz5fxtgl/"
+    },
+    {
+      "title": "What Agentic Software Development Looks Like in August 2026",
+      "content": "It was the dawn of a new age for software development the moment LLMs found their home inside IDEs. From this point forward, ChatGPT and similar AI assistants became more than resources a dev has to prompt...",
+      "platform": "Wordpress",
+      "date": "2026-09-05",
+      "url": "https://ujsolon.wordpress.com/2026/09/05/what-agentic-software-development-looks-like-in-august-2026/"
+    },
+    {
       "title": "Deprecated: Gone but Not Forgotten",
       "content": "I was reviewing a pool of questions for a technical interview when I passed by a question that went: “In the LLM setting, what is temperature / top-p / top-k?”...",
       "platform": "Wordpress",
